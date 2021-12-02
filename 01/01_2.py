@@ -3,7 +3,7 @@ with open('input.txt') as f:
     input = f.readlines()
 inputINTUngrouped = [int(numeric_string) for numeric_string in input]
 
-# Group Array
+# Group
 inputINT = []
 i = 0
 while i < len(inputINTUngrouped):
