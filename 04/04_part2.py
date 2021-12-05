@@ -36,6 +36,7 @@ for idx, row in enumerate(rawBoards, start=1):
 
 
 def calculateScore(board, drawnNumbers):
+    print("CALC DRAWNNUMBERS {}".format(drawnNumbers))
     notDrawnNumbers = []
     for row in board:
         notDrawnNumbers = notDrawnNumbers + \
@@ -44,6 +45,7 @@ def calculateScore(board, drawnNumbers):
 
 
 def checkHorizonalWin(boards, drawnNumbers):
+    print("chekH DRAWNNUMBERS {}".format(drawnNumbers))
     isWin = False
     score = 0
     winningBoard = 0
@@ -57,6 +59,7 @@ def checkHorizonalWin(boards, drawnNumbers):
 
 
 def checkVerticalWin(boards, drawnNumbers):
+    print("chekV DRAWNNUMBERS {}".format(drawnNumbers))
     isWin = False
     score = 0
     winningBoard = 0
@@ -74,6 +77,7 @@ def checkVerticalWin(boards, drawnNumbers):
 alreadyWonBoards = []
 for theNumberThatWasJustCalled in randomNumbers:
     drawnNumbers.append(theNumberThatWasJustCalled)
+    print("DRAWNNUMBERS {}".format(drawnNumbers))
 
     hWin, hScore, hWinningBoard = checkHorizonalWin(boards, drawnNumbers)
     if hWin and hWinningBoard not in alreadyWonBoards:
